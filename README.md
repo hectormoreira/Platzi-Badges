@@ -1,7 +1,7 @@
 # Platzi-Badges
 Course React.js - Platzi: PlatziBadges
 
-## Global react
+## Global React
 ```
 npm install -g create-react-app
 ```
