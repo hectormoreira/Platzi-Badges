@@ -8,17 +8,17 @@ import BadgeForm from "../components/BadgeForm";
 class BadgeNew extends Component {
   state = {
     form: {
-      firstName:'',
-      lastName:'',
-      email:'',
-      jobTitle:'',
-      twitter:''
+      firstName: '',
+      lastName: '',
+      email: '',
+      jobTitle: '',
+      twitter: ''
     }
   }
 
-  handleChange= (e)=>{
+  handleChange = (e) => {
     this.setState({
-      form:{
+      form: {
         ...this.state.form,
         [e.target.name]: e.target.value,
       },
