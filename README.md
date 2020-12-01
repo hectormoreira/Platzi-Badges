@@ -12,12 +12,17 @@ cd Platzi-Bages
 npm install
 ```
 
-## Run server
+## Install React Router (Browser)
 ```
-npm run start
+npm install react-router-dom
 ```
 
 ## Install Bootstrap
 ```
 npm install bootstrap
+```
+
+## Run server
+```
+npm run start
 ```
