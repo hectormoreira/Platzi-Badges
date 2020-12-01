@@ -20,6 +20,8 @@ class Home extends Component {
                             <h2>PRINT YOUR BADGES</h2>
                             <h5>The easiest way to manage your conference</h5>
                             <Link className="btn btn-primary" to="/badges">Start</Link>
+                            <hr/>
+                            <Link className="btn btn-secondary" to="/rickandmorty">Rick And Morty</Link>
                         </div>
 
                         <div className="Home__col d-none d-md-block col-md-8">
