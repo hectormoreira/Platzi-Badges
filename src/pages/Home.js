@@ -17,7 +17,6 @@ class Home extends Component {
                                 alt="Platzi Conf Logo"
                                 className="img-fluid mb-2"
                             />
-
                             <h1>Badge Management System</h1>
                             <Link className="btn btn-primary" to="/badges">Start</Link>
                         </div>
