@@ -17,11 +17,6 @@ npm install
 npm install react-router-dom
 ```
 
-## Install Bootstrap
-```
-npm install bootstrap
-```
-
 ## Run server
 ```
 npm run start
@@ -35,9 +30,10 @@ Constructor(props){
     hacer bind de métodos y definir propiedades internas en las que podemos guardar muchos datos diferente*/
 }
 
-componentWillMonunt(){
-	/*Este método se ejecuta cuando el componente se está por renderizar. En este punto es posible modificar
-    el estado del componente sin causar una actualización (y por lo tanto no renderizar dos veces el componente).*/
+componentWillMount(){
+	/*Este método se ejecuta cuando el componente se está por renderizar.
+	En este punto es posible modificar el estado del componente sin causar una actualización
+	(y por lo tanto no renderizar dos veces el componente).*/
 }
 
 render(){
@@ -89,4 +85,10 @@ Package JSON
 "test": "react-scripts test",
 "eject": "react-scripts eject"
 }
+```
+
+## Install other dependencies
+```
+npm install bootstrap
+npm install md5
 ```

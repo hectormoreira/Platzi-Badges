@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import "./styles/BadgeNew.css"
 import header from '../images/platziconf-logo.svg'
-import Navbar from "../components/Navbar";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
+import api from "../api";
+import PageLoading from "../components/PageLoading";
 
 class BadgeNew extends Component {
   state = {
+    loading: false,
+    error: null,
     form: {
       firstName: '',
       lastName: '',
@@ -25,8 +28,27 @@ class BadgeNew extends Component {
     })
   }
 
+  handleSubmit = (e) =>{
+    e.preventDefault();
+    this.setState({ loading: true, error: null })
+
+    try {
+      api.badges.create(this.state.form);
+      this.setState({ loading: false });
+      this.props.history.push('/badges');
+    } catch (error) {
+      this.setState({ loading: false, error: error })
+    }
+
+  }
+
 
   render() {
+    if (this.state.loading) {
+      return <PageLoading />
+    }
+
+
     return (
       <React.Fragment>
         <div className="BadgeNew__hero">
@@ -45,7 +67,12 @@ class BadgeNew extends Component {
               />
             </div>
             <div className="col-6">
-              <BadgeForm onChange={this.handleChange} formValues={this.state.form} />
+              <BadgeForm
+                onChange={this.handleChange}
+                onSubmit={this.handleSubmit}
+                formValues={this.state.form}
+                error={this.state.error}
+              />
             </div>
           </div>
         </div>
