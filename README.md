@@ -67,6 +67,11 @@ componentWillUpdate(nextProps, nextState){
 - Error
 - Data
 
+### Hooks
+- useState
+- useEffect
+- useReducer
+
 ## Install faker api
 ```
 npm install faker --save-dev
